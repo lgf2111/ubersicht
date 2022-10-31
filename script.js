@@ -3,10 +3,21 @@ function getWeeksDiff(startDate, endDate) {
     return Math.round(Math.abs(endDate - startDate) / msInWeek);
 }
 
+function getMonday(d) {
+    d = new Date(d);
+    var day = d.getDay(),
+        diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
+    d.setHours(8);
+    d.setMinutes(0);
+    d.setSeconds(0);
+    return new Date(d.setDate(diff));
+}
+
 const startWeek = new Date('2022-10-17');
-const thisWeek = getWeeksDiff(startWeek, Date.now())
+const thisWeek = getMonday(Date.now())
+const thisWeekNo = getWeeksDiff(startWeek, getMonday(Date.now()))
 const weekNo = document.getElementById("week-no");
-weekNo.innerText = thisWeek;
+weekNo.innerText = thisWeekNo;
 
 const tBody = document.querySelector("tbody");
 const tRows = tBody.querySelectorAll("tr");
@@ -16,8 +27,7 @@ var totalAssessmentsDone = 0
 for (let i = 0; i < totalAssessments; i++) {
     const tRow = tRows[i];
     const rWeek = parseInt(tRow.querySelectorAll("td")[4].innerText);
-    console.log(tRow)
-    if (rWeek < thisWeek) {
+    if (rWeek < thisWeekNo) {
         tRow.style.display = "none";
     } else {
         totalAssessmentsDone = i;
