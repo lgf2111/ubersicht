@@ -15,7 +15,9 @@ function getMonday(d) {
 
 const startWeek = new Date('2022-10-17');
 const thisWeek = getMonday(Date.now())
-const thisWeekNo = getWeeksDiff(startWeek, getMonday(Date.now()))
+console.log(startWeek)
+console.log(thisWeek)
+const thisWeekNo = getWeeksDiff(startWeek, getMonday(Date.now())) + 1
 const weekNo = document.getElementById("week-no");
 weekNo.innerText = thisWeekNo;
 
