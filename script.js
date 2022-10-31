@@ -1,23 +1,12 @@
 function getWeeksDiff(startDate, endDate) {
     const msInWeek = 1000 * 60 * 60 * 24 * 7;
+    console.log(Math.abs(endDate - startDate) / msInWeek)
     return Math.round(Math.abs(endDate - startDate) / msInWeek);
 }
 
-function getMonday(d) {
-    d = new Date(d);
-    var day = d.getDay(),
-        diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
-    d.setHours(8);
-    d.setMinutes(0);
-    d.setSeconds(0);
-    return new Date(d.setDate(diff));
-}
-
 const startWeek = new Date('2022-10-17');
-const thisWeek = getMonday(Date.now())
-console.log(startWeek)
-console.log(thisWeek)
-const thisWeekNo = getWeeksDiff(startWeek, getMonday(Date.now())) + 1
+const thisWeek = Date.now()
+const thisWeekNo = getWeeksDiff(startWeek, thisWeek) + 1
 const weekNo = document.getElementById("week-no");
 weekNo.innerText = thisWeekNo;
 
