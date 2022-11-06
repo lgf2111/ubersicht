@@ -1,7 +1,8 @@
 function getWeeksDiff(startDate, endDate) {
     const msInWeek = 1000 * 60 * 60 * 24 * 7;
-    console.log(Math.abs(endDate - startDate) / msInWeek)
-    return Math.round(Math.abs(endDate - startDate) / msInWeek);
+    weekDiff = Math.abs(endDate - startDate) / msInWeek
+    console.log(weekDiff)
+    return Math.floor(weekDiff);
 }
 
 const startWeek = new Date('2022-10-17');
