@@ -32,7 +32,7 @@ export const className = `
 // is passed in as a string.
 export const render = ({ output }) => {
   return (
-    <iframe src="https://lgf2111.github.io/ubersicht/assessments/index.html" frameborder="0"></iframe>
+    <iframe src="https://lgf2111.github.io/ubersicht/assessments/index.html" frameBorder="0"></iframe>
   );
 }
 
