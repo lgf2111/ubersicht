@@ -9,7 +9,7 @@
 // export const command = "whoami";
 
 // the refresh frequency in milliseconds
-export const refreshFrequency = 1000000;
+export const refreshFrequency = 1;
 
 // the CSS style for this widget, written using Emotion
 // https://emotion.sh/
