@@ -14,14 +14,10 @@ export const refreshFrequency = 1;
 // the CSS style for this widget, written using Emotion
 // https://emotion.sh/
 export const className = `
-  top: 10%;
-  right: 0;
-  left: 0;
-  width: 1000px;
-  height: 720px;
-  box-sizing: border-box;
-  margin: auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
   iframe {
     height: 100%;
     width: 100%;
