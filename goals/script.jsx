@@ -9,7 +9,7 @@
 // export const command = "whoami";
 
 // the refresh frequency in milliseconds
-// export const refreshFrequency = 1;
+export const refreshFrequency = 100000;
 
 // the CSS style for this widget, written using Emotion
 // https://emotion.sh/
@@ -28,7 +28,7 @@ export const className = `
 // is passed in as a string.
 export const render = ({ output }) => {
   return (
-    <iframe src="https://lgf2111.github.io/ubersicht/whiteboard/index.html" frameBorder="0"></iframe>
+    <iframe src="https://lgf2111.github.io/ubersicht/goals/index.html" frameBorder="1"></iframe>
   );
 }
 
