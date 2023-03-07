@@ -19,8 +19,8 @@ export const className = `
   right: 5%;
   bottom: 5%;
   iframe {
-    height: 100%;
     width: 100%;
+    height: 100%;
   }
 `
 
@@ -28,7 +28,7 @@ export const className = `
 // is passed in as a string.
 export const render = ({ output }) => {
   return (
-    <iframe src="https://lgf2111.github.io/ubersicht/goals/index.html" frameBorder="0"></iframe>
+    <iframe src="https://lgf2111.github.io/ubersicht/goals/index.html" frameBorder="1"></iframe>
   );
 }
 
