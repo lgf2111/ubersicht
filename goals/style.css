@@ -1,6 +1,6 @@
 img {
-    width: calc(1400px .8);
-    height: calc(1080px * .8);
+    width: calc(1400px .75);
+    height: calc(1080px * .75);
     position: absolute;
     left: 50%;
     top: 50%;
